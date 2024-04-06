@@ -1,4 +1,10 @@
+<div align="center">
+  <br />
+      <img src="fullpage.png" alt="Project Banner">
+  <br />
+</div>
 # React + Vite
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
