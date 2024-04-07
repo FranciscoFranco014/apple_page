@@ -8,9 +8,9 @@ const Footer = () => {
         <div>
           <p className="font-semibold text-gray text-xs">
             More ways to shop: {' '}
-            <span className="underline text-blue">
+            <a href='https://www.apple.com/lae/iphone-15-pro/' target="_blank" className="underline text-blue">
             Find an Apple Store {' '}
-            </span>
+            </a>
             or {' '}
             <span className="underline text-blue">
             other retailer
@@ -18,14 +18,14 @@ const Footer = () => {
             near you.
           </p>
           <p className="font-semibold text-gray text-xs">
-            Or call 000800-040-1966
+            Or call 000800-123-4567
           </p>
         </div>
 
         <div className="bg-neutral-700 my-5 h-[1px] w-full" />
 
         <div className="flex md:flex-row flex-col md:items-center justify-between">
-          <p className="font-semibold text-gray text-xs">Inspired by JsMastery.</p>
+          <p className="font-semibold text-gray text-xs">Inspired by JsMastery. Made by <a target="_blank" href='https://www.linkedin.com/in/franciscofrco/' className="underline text-blue"> FFranco.</a></p>
           <div className="flex">
             {footerLinks.map((link, i) => (
               <p key={link} className="font-semibold text-gray text-xs">

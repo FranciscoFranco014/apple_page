@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 
 import Battery from './components/Battery'
 import InfoSection from './components/InfoSection'
+import InfoSection2 from './components/InfoSection2'
 
 const App = () => {
 
@@ -23,6 +24,7 @@ const App = () => {
         <Features/>
         <HowItWorks/>
         <InfoSection/>
+        <InfoSection2/>
         <Battery/>
         <Footer/>
     </main>

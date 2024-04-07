@@ -15,11 +15,11 @@ const HighLights = () => {
 
           <div className="flex flex-wrap items-end gap-5">
             <p className="link">
-              Watch the film.
+              <a href="https://www.youtube.com/watch?v=xqyUdNxWazA" target="_blank">   Watch the film.</a>
               <img src={watchImg} alt="watch" className="ml-2"/>
             </p>
             <p className="link">
-              Watch the event.
+              <a href="https://www.youtube.com/watch?v=GYkq9Rgoj8E" target="_blank"> Watch the event.</a>
               <img src={rightImg} alt="right" className="ml-2"/>
             </p>
           </div>

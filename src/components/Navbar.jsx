@@ -19,7 +19,6 @@ const Navbar = () => {
                    
                 </Link>
             ))}
-             <h4 className='px-5 text-sm cursor-pointer text-gray hover:text-white transition-all'>Mac </h4>
             </div> 
             <div className='flex items-baseline gap-7 max-sm:justify-end max-sm:flex-1'>
                 <img src={searchImg} alt="Search" width={18} height={18} />
