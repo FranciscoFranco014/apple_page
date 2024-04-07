@@ -10,24 +10,23 @@ import Footer from './components/Footer'
 import Battery from './components/Battery'
 import InfoSection from './components/InfoSection'
 import InfoSection2 from './components/InfoSection2'
+import Home from './pages/Home'
 
+import { Routes, Route, Navigate } from 'react-router-dom';
+import MacPage from './pages/MacPage'
+import SupportPage from './pages/SupportPage'
 const App = () => {
 
   return (
-   
-      <main className=' bg-black'>
-        <Navbar/>
-      
-        <HeroSection/>
-        <HighLights/>
-        <Model/>
-        <Features/>
-        <HowItWorks/>
-        <InfoSection/>
-        <InfoSection2/>
-        <Battery/>
-        <Footer/>
-    </main>
+   <Suspense >
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/mac' element={<MacPage/>}/>
+      <Route path='/store' element={<MacPage/>}/>
+      <Route path='/support' element={<SupportPage/>}/>
+    </Routes>
+   </Suspense>
+    
   
   )
 }
