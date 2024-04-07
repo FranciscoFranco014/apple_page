@@ -2,6 +2,9 @@ import hero from "/assets/images/hero.jpeg";
 
 export const heroImg = hero;
 
+
+import fullpage from "/assets/images/fullpage.png"
+export const fullPage = fullpage
 import hmv from "/assets/videos/hero.mp4";
 import smallmv from "/assets/videos/smallHero.mp4";
 import highlightFirstmv from "/assets/videos/highlight-first.mp4";
@@ -28,6 +31,15 @@ import explore1 from "/assets/images/explore1.jpg";
 import explore2 from "/assets/images/explore2.jpg";
 import chip from "/assets/images/chip.jpeg";
 import frame from "/assets/images/frame.png";
+
+import leftimage from "/assets/images/leftimage.jpg";
+export const leftImg = leftimage
+
+import centerimage from "/assets/images/centerimage.webp";
+export const centerImage = centerimage
+
+import rightimage from "/assets/images/rightimage.webp";
+export const rightImage = rightimage
 
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;

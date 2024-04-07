@@ -134,4 +134,7 @@ canvas {
   .g_fadeIn3 {
     @apply opacity-0 translate-y-[100px]
   }
+  .g_fadeIn4 {
+    @apply opacity-0 translate-y-[100px]
+  }
 }
