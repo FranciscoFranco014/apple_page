@@ -1,32 +1,57 @@
-import { Suspense, useState } from 'react'
-import Navbar from './components/Navbar'
-import HeroSection from './components/HeroSection'
-import HighLights from './components/HighLights'
-import Model from './components/Model'
-import Features from './components/Features'
-import HowItWorks from './components/HowItWorks'
-import Footer from './components/Footer'
+import { Suspense, useEffect, useRef, useState } from 'react'
+import { gsap } from 'gsap';
 
-import Battery from './components/Battery'
-import InfoSection from './components/InfoSection'
-import InfoSection2 from './components/InfoSection2'
 import Home from './pages/Home'
 
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, } from 'react-router-dom';
 import MacPage from './pages/MacPage'
 import SupportPage from './pages/SupportPage'
+import LoaderPage from './pages/LoaderPage'
+
+
 const App = () => {
+const [loading, setLoading] = useState(true);
+  const contentRef = useRef(null); // 
+  const loaderRef = useRef(null); // 
+
+  useEffect(() => {
+    if (!loading) {
+      const tl = gsap.timeline();
+      tl.to(loaderRef.current, {
+        opacity: 0,
+        duration: 0.5,
+        onComplete: () => {
+          gsap.to(contentRef.current, {
+            opacity: 1,
+            duration: 0.5,
+          });
+        }
+      });
+    }
+  }, [loading]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <div ref={loaderRef}><LoaderPage /></div>;
+  }
 
   return (
-   <Suspense >
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/mac' element={<MacPage/>}/>
-      <Route path='/store' element={<MacPage/>}/>
-      <Route path='/support' element={<SupportPage/>}/>
-    </Routes>
-   </Suspense>
-    
+  <div ref={contentRef} style={{opacity: 0}}>
+    <Suspense fallback={<LoaderPage/>}>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/mac' element={<MacPage/>}/>
+        <Route path='/store' element={<MacPage/>}/>
+        <Route path='/support' element={<SupportPage/>}/>
+      </Routes>
+    </Suspense>
+      
+  </div>
+   
   
   )
 }

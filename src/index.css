@@ -17,6 +17,14 @@ body {
   border-color: #3b3b3b;
   user-select: none;
 }
+.preloader{
+  font-size: 7rem;
+  transform: translateY(100px);
+  transition: transform .5s;  
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  line-height: 8rem;
+  color: #FFF;
+} 
 
 canvas {
   touch-action: none;
@@ -137,4 +145,5 @@ canvas {
   .g_fadeIn4 {
     @apply opacity-0 translate-y-[100px]
   }
+  
 }
