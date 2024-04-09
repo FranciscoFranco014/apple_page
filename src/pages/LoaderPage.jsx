@@ -23,7 +23,7 @@ const LoaderPage = () => {
           <img id='img' src={appleImg} alt='apple' className='opacity-0' to='/' width={14} height={18}/>
         </Link>    */}
         <div className='flex flex-center texts-container '>
-          <h1 ref={textRef}id='loader-text' className="  hero-title  text-white  ">A</h1>
+         <h1 ref={textRef}id='loader-text' className="  hero-title  text-white  ">A</h1>
         <h1 ref={textRef} id='loader-text' className="hero-title text-white  ">p</h1>
         <h1 ref={textRef} id='loader-text' className="loader-text hero-title text-white  ">p</h1>
         <h1 ref={textRef} id='loader-text' className="loader-text hero-title text-white  ">l</h1>

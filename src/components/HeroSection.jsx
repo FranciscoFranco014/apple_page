@@ -2,6 +2,7 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { heroVideo, smallHeroVideo } from '../utils'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const HeroSection = () => {
   const [videoSrc, setVideoSrc] = useState(window.innerWidth < 760 ? smallHeroVideo : heroVideo)
@@ -39,8 +40,8 @@ const HeroSection = () => {
       </div>
 
       <div id='cta' className='flex flex-col items-center opacity-0 translate-y-20' >
-        <a href='#highlights' className='px-5 py-2 rounded-3xl bg-[#2563eb] my-5 hover:bg-[#3b82f6] border border-transparent hover:border hover:text-white hover:border-blue'> Buy</a>
-        <p className='font-bold text-xl'>From $999 or $41.62/mo. for 24 mo.</p>
+        <Link type='button' to='/store' className='px-5 py-2 rounded-3xl bg-[#2563eb] my-5 hover:bg-[#3b82f6] border border-transparent hover:border hover:text-white hover:border-blue'> Buy</Link>
+        <p className='font-bold text-xl'>From $999 or $41.62/mo. for 24 months.</p>
       </div>
     </section>
   )
